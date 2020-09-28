@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {useSelector} from 'react-redux'
 import MainElem from '../components/MainElem'
 import CardElem from '../components/CardElem'
@@ -7,6 +7,9 @@ import MainContainer from '../components/elements/mainContainer'
 
 const Home = ()=>{
     const state = useSelector(state=>state);
+    useEffect(()=>{
+       console.log(state); 
+    })
     return(
         <MainContainer darkmode={state}>
             <Button />
